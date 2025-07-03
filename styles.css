@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.command-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.command {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.command:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #1e1e1e;
+}
+
+.command:hover h2 {
+    color: #d4d4d4;
+}
+
+.command:hover p {
+    color: #858585;
+}
+
+.command h2 {
+    margin: 0 0 10px;
+    color: #2c3e50;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.command p {
+    margin: 0;
+    color: #555;
+    transition: color 0.3s ease;
+}
