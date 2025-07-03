@@ -1,1 +1,1 @@
-#  Aprendendo comandos git e desenvolvendo conhecimento pratico
+#  Desenvolvendo conhecimento pratico com comandos git 
