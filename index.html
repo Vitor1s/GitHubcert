@@ -1,90 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comandos Git - Detalhes em Português</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
     <h1>Comandos Git</h1>
-    <div class="command-container">
-        <div class="command">
-            <h2>git init</h2>
-            <p>Inicia um novo repositório Git no diretório atual.</p>
-        </div>
-        <div class="command">
-            <h2>git clone [URL]</h2>
-            <p>Clona um repositório Git existente para o diretório local.</p>
-        </div>
-        <div class="command">
-            <h2>git add .</h2>
-            <p>Adiciona alterações ao índice (staging area) para prepará-las para o commit.</p>
-        </div>
-        <div class="command">
-            <h2>git commit -m "mensagem"</h2>
-            <p>Realiza um commit com as alterações adicionadas, incluindo uma mensagem que descreve as mudanças feitas.</p>
-        </div>
-        <div class="command">
-            <h2>git status</h2>
-            <p>Exibe o estado atual do repositório, indicando quais arquivos foram modificados, adicionados ou removidos.</p>
-        </div>
-        <div class="command">
-            <h2>git log</h2>
-            <p>Mostra o histórico de commits do repositório.</p>
-        </div>
-        <div class="command">
-            <h2>git branch</h2>
-            <p>Lista todas as branches locais e destaca a branch atual.</p>
-        </div>
-        <div class="command">
-            <h2>git branch [nome-da-branch]</h2>
-            <p>Cria uma nova branch.</p>
-        </div>
-        <div class="command">
-            <h2>git checkout [nome-da-branch]</h2>
-            <p>Altera para uma branch específica.</p>
-        </div>
-        <div class="command">
-            <h2>git merge [branch]</h2>
-            <p>Combina as alterações de uma branch para a branch atual.</p>
-        </div>
-        <div class="command">
-            <h2>git pull</h2>
-            <p>Atualiza o repositório local com as alterações do repositório remoto.</p>
-        </div>
-        <div class="command">
-            <h2>git push [remote] [branch]</h2>
-            <p>Envia os commits locais para o repositório remoto.</p>
-        </div>
-        <div class="command">
-            <h2>git remote -v</h2>
-            <p>Lista os repositórios remotos configurados.</p>
-        </div>
-        <div class="command">
-            <h2>git fetch</h2>
-            <p>Recupera as últimas alterações do repositório remoto, mas não faz merge automaticamente.</p>
-        </div>
-        <div class="command">
-            <h2>git reset [arquivo]</h2>
-            <p>Desfaz as alterações no arquivo especificado, removendo-o do índice.</p>
-        </div>
-        <div class="command">
-            <h2>git rm [arquivo]</h2>
-            <p>Remove um arquivo do repositório e o inclui no próximo commit.</p>
-        </div>
-        <div class="command">
-            <h2>git diff</h2>
-            <p>Mostra as diferenças entre as alterações que ainda não foram adicionadas ao índice.</p>
-        </div>
-        <div class="command">
-            <h2>git remote add [nome-remoto] [URL]</h2>
-            <p>Adiciona um repositório remoto com um nome específico.</p>
-        </div>
-        <div class="command">
-            <h2>git push add origin main</h2>
-            <p>Nota: Este comando parece estar incorreto. O comando correto é <code>git push origin main</code>, que envia os commits locais para a branch "main" no repositório remoto "origin".</p>
-        </div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Pesquisar comandos Git..."
+      />
+      <div id="searchCount" class="search-count"></div>
     </div>
-</body>
+    <div class="command-container">
+      <div class="command">
+        <h2>git init</h2>
+        <p>Inicia um novo repositório Git no diretório atual.</p>
+      </div>
+      <div class="command">
+        <h2>git clone [URL]</h2>
+        <p>Clona um repositório Git existente para o diretório local.</p>
+      </div>
+      <div class="command">
+        <h2>git add .</h2>
+        <p>
+          Adiciona alterações ao índice (staging area) para prepará-las para o
+          commit.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git commit -m "mensagem"</h2>
+        <p>
+          Realiza um commit com as alterações adicionadas, incluindo uma
+          mensagem que descreve as mudanças feitas.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git status</h2>
+        <p>
+          Exibe o estado atual do repositório, indicando quais arquivos foram
+          modificados, adicionados ou removidos.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git log</h2>
+        <p>Mostra o histórico de commits do repositório.</p>
+      </div>
+      <div class="command">
+        <h2>git branch</h2>
+        <p>Lista todas as branches locais e destaca a branch atual.</p>
+      </div>
+      <div class="command">
+        <h2>git branch [nome-da-branch]</h2>
+        <p>Cria uma nova branch.</p>
+      </div>
+      <div class="command">
+        <h2>git checkout [nome-da-branch]</h2>
+        <p>Altera para uma branch específica.</p>
+      </div>
+      <div class="command">
+        <h2>git merge [branch]</h2>
+        <p>Combina as alterações de uma branch para a branch atual.</p>
+      </div>
+      <div class="command">
+        <h2>git pull</h2>
+        <p>
+          Atualiza o repositório local com as alterações do repositório remoto.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git push [remote] [branch]</h2>
+        <p>Envia os commits locais para o repositório remoto.</p>
+      </div>
+      <div class="command">
+        <h2>git remote -v</h2>
+        <p>Lista os repositórios remotos configurados.</p>
+      </div>
+      <div class="command">
+        <h2>git fetch</h2>
+        <p>
+          Recupera as últimas alterações do repositório remoto, mas não faz
+          merge automaticamente.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git reset [arquivo]</h2>
+        <p>
+          Desfaz as alterações no arquivo especificado, removendo-o do índice.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git rm [arquivo]</h2>
+        <p>Remove um arquivo do repositório e o inclui no próximo commit.</p>
+      </div>
+      <div class="command">
+        <h2>git diff</h2>
+        <p>
+          Mostra as diferenças entre as alterações que ainda não foram
+          adicionadas ao índice.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git remote add [nome-remoto] [URL]</h2>
+        <p>Adiciona um repositório remoto com um nome específico.</p>
+      </div>
+      <div class="command">
+        <h2>git push origin main</h2>
+        <p>
+          O comando git push origin main envia os commits do branch local
+          chamado main para o branch main do repositório remoto chamado origin.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git stash</h2>
+        <p>
+          Salva temporariamente as alterações não commitadas para que você possa
+          trabalhar em algo diferente.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git stash pop</h2>
+        <p>
+          Aplica as alterações salvas mais recentes do stash e remove-as da
+          lista de stashes.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git checkout -b [nova-branch]</h2>
+        <p>
+          Cria uma nova branch e muda imediatamente para ela em um único
+          comando.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git branch -d [nome-da-branch]</h2>
+        <p>Remove uma branch local que já foi mesclada.</p>
+      </div>
+      <div class="command">
+        <h2>git reset --hard HEAD~1</h2>
+        <p>
+          Desfaz o último commit e remove todas as alterações associadas
+          permanentemente.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git revert [commit-hash]</h2>
+        <p>
+          Cria um novo commit que desfaz as alterações de um commit específico,
+          mantendo o histórico.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git log --oneline</h2>
+        <p>
+          Mostra o histórico de commits de forma condensada, uma linha por
+          commit.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git tag [nome-da-tag]</h2>
+        <p>
+          Cria uma tag para marcar um ponto específico no histórico, geralmente
+          usado para versões.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git show [commit-hash]</h2>
+        <p>
+          Exibe informações detalhadas sobre um commit específico, incluindo as
+          alterações feitas.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git config --global user.name "Seu Nome"</h2>
+        <p>
+          Configura o nome do usuário globalmente para todos os repositórios
+          Git.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git config --global user.email "email@exemplo.com"</h2>
+        <p>
+          Configura o email do usuário globalmente para todos os repositórios
+          Git.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git cherry-pick [commit-hash]</h2>
+        <p>
+          Aplica as alterações de um commit específico de outra branch na branch
+          atual.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git rebase [branch]</h2>
+        <p>
+          Reaplica commits da branch atual sobre outra branch, criando um
+          histórico linear.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git blame [arquivo]</h2>
+        <p>Mostra quem modificou cada linha de um arquivo e em qual commit.</p>
+      </div>
+      <div class="command">
+        <h2>git clean -fd</h2>
+        <p>
+          Remove arquivos e diretórios não rastreados do diretório de trabalho.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git remote remove [nome-remoto]</h2>
+        <p>Remove um repositório remoto da configuração local.</p>
+      </div>
+      <div class="command">
+        <h2>git reflog</h2>
+        <p>
+          Mostra um log de referência com todas as alterações feitas no
+          repositório, útil para recuperar commits perdidos.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git commit --amend</h2>
+        <p>
+          Modifica o último commit, permitindo alterar a mensagem ou adicionar
+          mais alterações.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git diff --staged</h2>
+        <p>
+          Mostra as diferenças entre os arquivos no índice (staging area) e o
+          último commit.
+        </p>
+      </div>
+      <div class="command">
+        <h2>git grep [texto]</h2>
+        <p>
+          Procura por texto específico em todos os arquivos rastreados pelo Git.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Funcionalidade de pesquisa
+      const searchInput = document.getElementById("searchInput");
+      const searchCount = document.getElementById("searchCount");
+      const commands = document.querySelectorAll(".command");
+
+      function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        commands.forEach((command) => {
+          const title = command.querySelector("h2").textContent.toLowerCase();
+          const description = command
+            .querySelector("p")
+            .textContent.toLowerCase();
+
+          if (
+            searchTerm === "" ||
+            title.includes(searchTerm) ||
+            description.includes(searchTerm)
+          ) {
+            command.style.display = "block";
+            visibleCount++;
+          } else {
+            command.style.display = "none";
+          }
+        });
+
+        // Atualizar contador
+        if (searchTerm === "") {
+          searchCount.textContent = `${commands.length} comandos disponíveis`;
+        } else {
+          searchCount.textContent = `${visibleCount} comando(s) encontrado(s)`;
+        }
+      }
+
+      // Event listeners
+      searchInput.addEventListener("input", performSearch);
+      searchInput.addEventListener("keyup", performSearch);
+
+      // Inicializar contador
+      searchCount.textContent = `${commands.length} comandos disponíveis`;
+
+      // Foco automático na barra de pesquisa
+      searchInput.focus();
+    </script>
+  </body>
 </html>
